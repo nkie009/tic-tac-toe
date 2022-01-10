@@ -1,22 +1,24 @@
-
-
-h1{
-    color: red;
+body {
+    font-family: 'Quicksand';
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
 }
-.grid-container{
+
+.groupGame {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    background-color: lightblue;
-    padding: 10px;
-
-
-}
-.grid-item{
-    border: 1px solid red;
-    text-align: center;
-    padding: 10px;
-    aspect-ratio: 1;
-    
+    max-width: 300px;
+    margin: 20px auto;
 }
 
+.cell {
+    font-family: 'Quicksand';
+    width: 100px;
+    height: 100px;
+    border: 3px solid blue;
+    cursor: pointer;
+    line-height: 100px;
+    font-size: 60px;
+}
