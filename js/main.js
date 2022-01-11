@@ -1,39 +1,52 @@
 $(document).ready(function(){
     console.log('check if its working')
 
-    let player1Turn = true;
+    let playerTurn = true;
     
+
+    
+    const winning = function(){
+        if ($("#1").html() === "x" && $("#2").html() === "x" && $("#3").html() === "x" || ) {
+            console.log('x win');
+        } 
+    }
+
+
     //on click function for all <div class="cell"> 9 cells 
     //all cells shared the same on click function
     $('.cell').on('click', function(){ 
-        //because all the cells share the same on click function we be able to tell which one was click, and jquery will give us the click DOM node in the variable "this"
-        console.log('check on click working on cells', $(this).html());
-        // first check if the cell is empty
-        if( $(this).html() === 'x' ){
-            console.log('x already here');
-        } else if ( $(this).html() === 'o' ){
-            console.log('o is here');
-        } else {
-            console.log('when cell is empty');
+        //because all the cells share the same on click function we be able to tell     which one was click, and jquery will give us the click DOM node in the variable "this"
+        // console.log('check on click working on cells', $(this).html());
+       
+        // first check if the cell is empty. you do this after coding the play1turn function. 
+        if( $(this).html() === 'x' || $(this).html() === 'o' ){ // check if x is placed
+            // console.log('x and o already here');
+            return // this is to stop the function 
+        // } else {
+        //     console.log('when cell is empty');
         }
 
-
-        if (player1Turn === true){ // if player1Turn is true then:              
+        if (playerTurn === true){ // if playerTurn is true then:              
             
             $(this).html('x'); // set the html in the clicked element to 'x'
-            player1Turn = false; // player1Turn is over now, so set player1Turn to false.
+            playerTurn = false; // playerTurn is over now, so set playerTurn to false.
             
-        } else { // if player1Turn is NOT true, then do this:
+            winning()
+        
+        } else { // if playerTurn is NOT true, then do this:
 
             $(this).html('o'); // set the html in the clicked element to 'o'
 
-            player1Turn = true; // its going to be player1 turn next click.
+            playerTurn = true; // its going to be player turn next click.
+            
         }
-
 
 
     }); // end of on click function
 
+    $('#gameRestart').on('click', function(){
+        console.log('check restart button working');      
+    })
 
 
 })// end of jq
