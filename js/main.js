@@ -3,12 +3,28 @@ $(document).ready(function(){
 
     let playerTurn = true;
     
-
-    
     const winning = function(){
-        if ($("#1").html() === "x" && $("#2").html() === "x" && $("#3").html() === "x" || ) {
-            console.log('x win');
-        } 
+        if ($("#1").html() === "x" && $("#2").html() === "x" && $("#3").html() === "x" || 
+            $("#4").html() === "x" && $("#5").html() === "x" && $("#6").html() === "x" || 
+            $("#7").html() === "x" && $("#8").html() === "x" && $("#9").html() === "x" ||
+            $("#1").html() === "x" && $("#4").html() === "x" && $("#7").html() === "x" ||  
+            $("#2").html() === "x" && $("#5").html() === "x" && $("#8").html() === "x" || 
+            $("#3").html() === "x" && $("#6").html() === "x" && $("#9").html() === "x" || 
+            $("#1").html() === "x" && $("#5").html() === "x" && $("#9").html() === "x" || 
+            $("#3").html() === "x" && $("#5").html() === "x" && $("#7").html() === "x" ){
+            alert("The winner is: X");
+            console.log('the winner is x');
+        } else if (
+            $("#1").html() === "o" && $("#2").html() === "o" && $("#3").html() === "o" || 
+            $("#4").html() === "o" && $("#5").html() === "o" && $("#6").html() === "o" || 
+            $("#7").html() === "o" && $("#8").html() === "o" && $("#9").html() === "o" ||
+            $("#1").html() === "o" && $("#4").html() === "o" && $("#7").html() === "o" ||  
+            $("#2").html() === "o" && $("#5").html() === "o" && $("#8").html() === "o" || 
+            $("#3").html() === "o" && $("#6").html() === "o" && $("#9").html() === "o" || 
+            $("#1").html() === "o" && $("#5").html() === "o" && $("#9").html() === "o" || 
+            $("#3").html() === "o" && $("#5").html() === "o" && $("#7").html() === "o" ){
+            alert("The winner is: O");
+        }
     }
 
 
@@ -38,15 +54,22 @@ $(document).ready(function(){
             $(this).html('o'); // set the html in the clicked element to 'o'
 
             playerTurn = true; // its going to be player turn next click.
-            
+            winning()
         }
 
 
     }); // end of on click function
 
     $('#gameRestart').on('click', function(){
-        console.log('check restart button working');      
+        // console.log('check restart button working'); 
+
     })
 
 
 })// end of jq
+
+
+
+
+
+//GIF https://i.imgur.com/IDIoWh9.gifv
