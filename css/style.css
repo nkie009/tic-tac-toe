@@ -1,9 +1,10 @@
 body {
     font-family: 'Quicksand';
-    background-color: lightgoldenrodyellow;
+    background-color: lightslategray;
     text-align: center;
     margin: 0 auto;
     font-weight: bold;
+    
 }
 
 .groupGame{
@@ -11,14 +12,13 @@ body {
     grid-template-columns: auto auto auto;
     max-width: 300px;
     margin: 5px auto;
-    
 }
 
 .cell {
     font-family: 'Quicksand';
     width: 100px;
     height: 100px;
-    border: 3px solid blue;
+    border: 3px solid darkgray;
     cursor: pointer;
     line-height: 90px;
     font-size: 60px;
@@ -30,6 +30,13 @@ body {
 
 table, th, td{
     border: 2px solid red;
+    display: absolute;
+}
+table{
+    width: 300px;
+    /* text-align: center; */
+    margin: 0 auto;
+    display: absolute;
 }
 
 button{
