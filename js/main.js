@@ -1,7 +1,9 @@
 $(document).ready(function(){
-    console.log('check if its working')
+    console.log('tic tac toe')
 
     let playerTurn = true;
+    let player1 = 'x';
+    let player2 = 'o';
     
     const winning = function(){ //here is to select individual cell and print x to the winning pattern
         if ($("#1").html() === "x" && $("#2").html() === "x" && $("#3").html() === "x" || 
@@ -27,17 +29,17 @@ $(document).ready(function(){
             alert("The winner is: O");
             // console.log('the winner is O');
 
-        } else if ($('.cell:empty').length == 0){ // here is if all cell are filled, it will return a draw
-            console.log('its a draw');
-            alert('Too bad its a draw! Start again')
+        } else if ($('.cell:empty').length === 0){ // here is if all cell are filled, it will return a draw
+            // console.log('It\'s a draw');
+            alert('Too bad it\'s a draw! Start again')
         }
     }
-
 
     //on click function for all <div class="cell"> 9 cells 
     //all cells shared the same on click function
     $('.cell').on('click', function(){ 
-        //because all the cells share the same on click function we be able to tell     which one was click, and jquery will give us the click DOM node in the variable "this"
+        //because all the cells share the same on click function we be able to tell    
+        //which one was click, and jquery will give us the click DOM node in the variable "this"
         // console.log('check on click working on cells', $(this).html());
        
         // here first check if the cell is empty. you do this after coding the play1turn function. 
@@ -65,8 +67,8 @@ $(document).ready(function(){
 
     }); // end of on click function
 
-    $('#gameRestart').on('click', function(){ // here is for for the restart button
-        // console.log('check restart button working'); 
+    $('#gameRestart').on('click', function(){ // here is for the restart button
+        // console.log('check restart button working?'); 
         $('.cell').empty(); // use .empty() function to clear the cells.
     })
 

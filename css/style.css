@@ -6,11 +6,12 @@ body {
     font-weight: bold;
 }
 
-.groupGame {
+.groupGame{
     display: grid;
     grid-template-columns: auto auto auto;
     max-width: 300px;
-    margin: 20px auto;
+    margin: 5px auto;
+    
 }
 
 .cell {
@@ -23,7 +24,17 @@ body {
     font-size: 60px;
 }
 
+.cell:hover{
+    background-color: lightgreen;
+}
+
+table, th, td{
+    border: 2px solid red;
+}
+
 button{
     background-color: lightseagreen;
     padding: 10px;
 }
+
+
