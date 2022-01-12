@@ -2,12 +2,12 @@ $(document).ready(function () {
     console.log('tic tac toe')
 
     let playerTurn = true;
-    let playerX = $('.player-x-score');
-    let playerO = $('.player-o-score');
-    let draw = $('.draw-score');
-    let xScoreUpdated = 0;
-    let oScoreUpdated = 0;
-    let drawScoreUpdate = 0;
+    let playerX = $('.player-x-score');// here is to select the player X cell from html
+    let playerO = $('.player-o-score');// here is to select the player O cell from html
+    let draw = $('.draw-score');// here is to select the draw cell from html
+    let xScoreUpdated = 0; // X player here is to set the score to update to html
+    let oScoreUpdated = 0; //O player here is to set the score to update to html
+    let drawScoreUpdate = 0;// Draw here is to set the score to update to html
 
 
     const winning = function () { //here is to select individual cell and print x to the winning pattern
