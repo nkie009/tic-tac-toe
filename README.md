@@ -4,16 +4,16 @@ README.md
 
 # Frankie's Project 0 
 
-A link to my live playable game on GitHub.
+[This is the link to my live playable game on GitHub](https://nkie009.github.io/tic-tac-toe/)
 
-**(https://nkie009.github.io/tic-tac-toe/)**
 
- 
 This project is a Tic Tac Toe game
 
 - Here is some of the screenshot of my game: 
-  ()
-
+  [screenshoots1](images/img1.jpg)
+  [screenshoots2](images/img2.jpg)
+  [screenshoots3](images/img3.jpg)
+  
 There's an X and O player which take turns to win.
 The game also store the score for each player who wins.
 
