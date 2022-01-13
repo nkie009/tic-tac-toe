@@ -9,7 +9,6 @@ $(document).ready(function () {
     let oScoreUpdated = 0; //O player here is to set the score to update to html
     let drawScoreUpdate = 0;// Draw here is to set the score to update to html
 
-
     const winning = function () { //here is to select individual cell and print x to the winning pattern
         if ($("#1").html() === "x" && $("#2").html() === "x" && $("#3").html() === "x" ||
             $("#4").html() === "x" && $("#5").html() === "x" && $("#6").html() === "x" ||
@@ -19,10 +18,9 @@ $(document).ready(function () {
             $("#3").html() === "x" && $("#6").html() === "x" && $("#9").html() === "x" ||
             $("#1").html() === "x" && $("#5").html() === "x" && $("#9").html() === "x" ||
             $("#3").html() === "x" && $("#5").html() === "x" && $("#7").html() === "x") {
-            // alert("The winner is: X");// try to popup a div
             xScoreUpdated = xScoreUpdated + 1;
             playerX.html(xScoreUpdated);
-           $('.popup1').addClass('show').html();
+            $('.popup1').addClass('show');
             // console.log('the winner is X');
 
         } else if ( // here is to select individual cell and print o to the winning pattern
@@ -34,22 +32,24 @@ $(document).ready(function () {
             $("#3").html() === "o" && $("#6").html() === "o" && $("#9").html() === "o" ||
             $("#1").html() === "o" && $("#5").html() === "o" && $("#9").html() === "o" ||
             $("#3").html() === "o" && $("#5").html() === "o" && $("#7").html() === "o") {
-            // alert("The winner is: O");
-            $('.popup2').addClass('show').html();
             oScoreUpdated = oScoreUpdated + 1;
             playerO.html(oScoreUpdated);
-            
+            $('.popup2').addClass('show');
             // console.log('the winner is O');
 
         } else if ($('.cell:empty').length === 0) { // here is if all cell are filled, it will return a draw
-            // console.log('It\'s a draw');
-            // alert('Too bad it\'s a draw! Start again')
             drawScoreUpdate = drawScoreUpdate + 1;
             draw.html(drawScoreUpdate);
-            $('.popup3').addClass('show').html();
+            $('.popup3').addClass('show');
+            // console.log('It\'s a draw');
         }
     }
 
+
+
+
+
+    
     //on click function for all <div class="cell"> 9 cells 
     //all cells shared the same on click function
     $('.cell').on('click', function () {
@@ -69,7 +69,6 @@ $(document).ready(function () {
 
             $(this).html('x'); // set the html in the clicked element to 'x'
             playerTurn = false; // playerTurn is over now, so set playerTurn to false.
-
             winning()
 
         } else { // if playerTurn is NOT true, then do this:
@@ -79,23 +78,33 @@ $(document).ready(function () {
             playerTurn = true; // its going to be player turn next click.
             winning()
         }
-
     }); // end of on click function
 
-    $('#gameRestart').on('click', function () { // here is for the restart button
+    
+    $('#gameAgain').on('click', function () { // here is for the restart button
         // console.log('check restart button working?'); 
         $('.cell').empty(); // use .empty() function to clear the cells
-        $('.popup1').css('display', 'none');  
-        $('.popup2').css('display', 'none');  
-        $('.popup3').css('display', 'none');  
+        $('.popup1').removeClass('show'); 
+        
     })
+    $('#gameAgain1').on('click', function () { // here is for the restart button
+        // console.log('check restart button working?'); 
+        $('.cell').empty(); // use .empty() function to clear the cells
+        $('.popup2').removeClass('show'); 
 
+    })
+    $('#gameAgain2').on('click', function () { // here is for the restart button
+        // console.log('check restart button working?'); 
+        $('.cell').empty(); // use .empty() function to clear the cells
+        $('.popup3').removeClass('show'); 
+    })
     
+    // $('#gameRestart').on('click', function () { // here is for the restart button
+    //     // console.log('check restart button working?'); 
+    //     $('.cell').empty(); // use .empty() function to clear the cells
+        
+    // })
+
+   
 
 })// end of jq
-
-
-
-
-
-//GIF https://i.imgur.com/IDIoWh9.gifv
