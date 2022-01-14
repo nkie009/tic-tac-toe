@@ -10,10 +10,10 @@ README.md
 This project is a Tic Tac Toe game
 
 - Here is some of the screenshot of my game: 
-  [screenshoots1](images/img1.jpg)
-  [screenshoots2](images/img2.jpg)
-  [screenshoots3](images/img3.jpg)
-  
+  [screenshoots1](image/img1.png)
+  [screenshoots2](image/img2.png)
+  [screenshoots3](image/img3.png)
+
 There's an X and O player which take turns to win.
 The game also store the score for each player who wins.
 
@@ -26,5 +26,5 @@ Tech Used
 
 Anything else you want to record about the project or the experience.
   - After completing this project 0 "Tic Tac Toe game", I have found my strongest skill in the course, which is in HTML and CSS. 
-  - I will continue to focus on my weak point is JS and JQuery. 
+  - I will continue to focus on my weak point in JS and JQuery. 
 

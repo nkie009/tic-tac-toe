@@ -7,13 +7,18 @@ body {
     font-size: 30px;
 }
 
+input{
+    width: 180px;
+    height: 30px;
+    font-size: 20px;
+}
+
 .gameTitle{
     color:yellow;
     font-size: 150px;
     margin: 0 auto;
     text-shadow: 3px 3px black;
     font-family: 'Nanum Pen Script', cursive;
-    
 }
 
 .groupGame{
@@ -22,7 +27,6 @@ body {
     justify-content: center;
     margin-bottom: 20px;
     margin-top: 20px;
-    
 }
 
 .cell {
@@ -44,7 +48,6 @@ body {
 }
 
 table, th, td{
-    /* border: 2px solid red; */
     display: absolute;
     color: rgb(5, 4, 90);
 }
@@ -67,7 +70,6 @@ button{
 }
 
 .popup1{
-    /* border: 1px solid red; */
     background-color: rgba(0, 0, 0, 0.5);
     max-width: 100vw;
     max-height: 100vw;
@@ -96,7 +98,6 @@ button{
 }
 
 .popup2{
-    /* border: 1px solid red; */
     max-width: 100vw;
     max-height: 100vh;
     margin: 0 auto;
@@ -143,12 +144,13 @@ button{
 }
 
 .WinPic3{
-    width: 300px;
+    width: 300px; 
     height: 300px;
     margin: 20px;
     align-items: center;
     text-align: center;
 }
+
 
 #copyright{
 	font-size: 25px;
