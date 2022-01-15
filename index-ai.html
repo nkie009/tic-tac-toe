@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main-ai.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Gloria+Hallelujah&family=Moo+Lah+Lah&family=Nanum+Pen+Script&family=Quicksand:wght@500&display=swap" rel="stylesheet">
-    <title>Tic-Tac-Toe</title>
+    <title>AI Tic Tac Toe</title>
 </head>
 <body>
-    <h1 class="gameTitle">TIC TAC TOE</h1>
-    
+    <h1 class="gameTitle">AI Tic Tac Toe</h1>
+
     <div class="popup1">
         <img class="WinPic1" src="https://media.giphy.com/media/FMapondVtL2Fi/giphy.gif">
         <h1>The player X wins!</h1>
@@ -22,7 +22,7 @@
     </div>
     <div class="popup2">
         <img class="WinPic2" src="https://media.giphy.com/media/l0HlSDiA6WUytl9oA/giphy.gif">
-        <h1>The player O wins!</h1>
+        <h1>Computer wins!</h1>
         <button id="gameAgain1">Try Again!</button>
     </div>
     <div class="popup3">
@@ -35,8 +35,7 @@
             <td>
             <input class="player1" placeholder="type your name">
             </td>
-            <td><input class="player2" placeholder="type your name">
-            </td>
+            <td>Computer</td>
             <td>Draw</td>
         </tr>
             <td class="player-x-score">0</td>
