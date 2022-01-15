@@ -10,33 +10,27 @@ $(document).ready(function () {
     let oScoreUpdated = 0; //O player here is to set the score to update to html
     let drawScoreUpdate = 0;// Draw here is to set the score to update to html
 
-    const winning = function () { //here is to select individual cell and print x to the winning pattern
-        if ($("#1").html() === "x" && $("#2").html() === "x" && $("#3").html() === "x" ||
-            $("#4").html() === "x" && $("#5").html() === "x" && $("#6").html() === "x" ||
-            $("#7").html() === "x" && $("#8").html() === "x" && $("#9").html() === "x" ||
-            $("#1").html() === "x" && $("#4").html() === "x" && $("#7").html() === "x" ||
-            $("#2").html() === "x" && $("#5").html() === "x" && $("#8").html() === "x" ||
-            $("#3").html() === "x" && $("#6").html() === "x" && $("#9").html() === "x" ||
-            $("#1").html() === "x" && $("#5").html() === "x" && $("#9").html() === "x" ||
-            $("#3").html() === "x" && $("#5").html() === "x" && $("#7").html() === "x") {
-            xScoreUpdated = xScoreUpdated + 1; // here is to add the winning score by 1 to the current score board
-            playerX.html(xScoreUpdated);// here is to updated the score in the html
-            $('.popup1').addClass('show');// here is to let the popup div to show when X is the winner
-            // console.log('the winner is X');
 
-        } else if ( // here is to select individual cell and print o to the winning pattern
-            $("#1").html() === "o" && $("#2").html() === "o" && $("#3").html() === "o" ||
-            $("#4").html() === "o" && $("#5").html() === "o" && $("#6").html() === "o" ||
-            $("#7").html() === "o" && $("#8").html() === "o" && $("#9").html() === "o" ||
-            $("#1").html() === "o" && $("#4").html() === "o" && $("#7").html() === "o" ||
-            $("#2").html() === "o" && $("#5").html() === "o" && $("#8").html() === "o" ||
-            $("#3").html() === "o" && $("#6").html() === "o" && $("#9").html() === "o" ||
-            $("#1").html() === "o" && $("#5").html() === "o" && $("#9").html() === "o" ||
-            $("#3").html() === "o" && $("#5").html() === "o" && $("#7").html() === "o") {
-            oScoreUpdated = oScoreUpdated + 1;
-            playerO.html(oScoreUpdated);
-            $('.popup2').addClass('show');
-            // console.log('the winner is O');
+
+    const winning = function (player) { //here is to select individual cell and print x to the winning pattern
+        if ($("#1").html() === player && $("#2").html() === player && $("#3").html() === player ||
+            $("#4").html() === player && $("#5").html() === player && $("#6").html() === player ||
+            $("#7").html() === player && $("#8").html() === player && $("#9").html() === player ||
+            $("#1").html() === player && $("#4").html() === player && $("#7").html() === player ||
+            $("#2").html() === player && $("#5").html() === player && $("#8").html() === player ||
+            $("#3").html() === player && $("#6").html() === player && $("#9").html() === player ||
+            $("#1").html() === player && $("#5").html() === player && $("#9").html() === player ||
+            $("#3").html() === player && $("#5").html() === player && $("#7").html() === player) {
+            
+                if (player === "x"){ //
+                    xScoreUpdated = xScoreUpdated + 1; // here is to add the winning score by 1 to the current score board
+                    playerX.html(xScoreUpdated);// here is to updated the score in the html
+                    $('.popup1').addClass('show');// here is to let the popup div to show when X is the winner
+                } else {
+                    oScoreUpdated = oScoreUpdated + 1;
+                    playerO.html(oScoreUpdated);
+                    $('.popup2').addClass('show');
+                }
 
         } else if ($('.cell:empty').length === 0) { // here is if all cell are filled, it will return a draw
             drawScoreUpdate = drawScoreUpdate + 1;
@@ -44,7 +38,7 @@ $(document).ready(function () {
             $('.popup3').addClass('show');
             // console.log('It\'s a draw');
         }
-    }
+    }; // end of winning
 
 
 
@@ -69,13 +63,13 @@ $(document).ready(function () {
 
             $(this).html('x'); // set the html in the clicked cell to 'x'
             playerTurn = false; // when playerTurn has finish, it will set the playerTurn false
-            winning()// here to run winning condition to the player turn.
+            winning('x')// here to run winning condition to the player turn.
 
         } else { // if playerTurn is NOT true, then do this:
 
             $(this).html('o'); // set the html in the clicked cell to 'o'
             playerTurn = true; // its going to be player turn next click.
-            winning()
+            winning('o')
         }
     }); // end of on click function
 
