@@ -26,7 +26,7 @@ $(document).ready(function () {
                 xScoreUpdated = xScoreUpdated + 1; // here is to add the winning score by 1 to the current score board
                 playerX.html(xScoreUpdated);// here is to updated the score in the html
                 $('.popup1').addClass('show');// here is to let the popup div to show when X is the winner
-
+// debugger
             } else { // here is to updated the player o score
                 oScoreUpdated = oScoreUpdated + 1;
                 playerO.html(oScoreUpdated);
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     }; // end of winning
 
-    const aiMove = function () { // here is the ai function starts
+    const aiMove = function () { // here is the function of ai starts.
         // console.log('ai turn');
         // 1. find an empty cell
         //      a. get a list of empty cell
@@ -52,8 +52,9 @@ $(document).ready(function () {
         // 2. place o onto selected empty cell
         const randomIndex = Math.floor(Math.random() * emptyCells.length);
         $(emptyCells[randomIndex]).html('o')
-        winning('o')// call the winning function to kick in the if else on line 30
+        winning('o') //call the winning function to kick in the if else on line 30
     }; // end of aiMove()
+
 
     //on click function for all <div class="cell"> 9 cells 
     //all cells shared the same on click function
@@ -68,7 +69,7 @@ $(document).ready(function () {
             return // by returning this it will stop the function 
 
         } else {
-            // console.log('w`hen cell is empty');
+            // console.log('when cell is empty');
         }
 
         // human move
